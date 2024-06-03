@@ -1,6 +1,6 @@
 # Uno Game
 
-This project contains an uno game on terminal programmed in Python. 
+This project contains an Uno game on terminal programmed in Python. 
 
 ## Rules
 
