@@ -15,7 +15,7 @@ This project contains an Uno game on terminal programmed in Python.
    - Players take turns matching a card from their hand with the current card shown on the discard pile by either color or Type.
    - If a player cannot match the discard pile, they must draw a card from the draw pile.
    - Action cards have specific effects that alter the flow of the game.
-     -   Skip: The next player loses ther round.
+     -   Skip: The next player loses their round.
      -   Reverse: The direction of play is reversed.
      -   Draw Two: The next player loses their round and has to draw 2 cards.
      -   Wild: Can be placed on anything and the current player specifies the color for the next player.
