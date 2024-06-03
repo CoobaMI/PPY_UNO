@@ -22,6 +22,6 @@ This project contains an Uno game on terminal programmed in Python.
      -   Wild Draw Four: Same as Wild, but the next player loses their round and has to draw 4 cards.
 
 4. **Winning**:
-   - When The player places their second to last card, they have to call "UNO" or someone else can call "STOP UNO".
+   - When the player places their second to last card, they have to call "UNO" or someone else can call "STOP UNO".
      When "UNO" is called, the game continues, but if "STOP UNO" is called, the player has to draw 2 cards.
    - The first player to get rid of all their cards wins.
