@@ -44,7 +44,7 @@ class Card:
             self.color == "W"
         )
 
-    def check_if_action(self):
+    def check_if_action(self) -> bool:
         """
         Check if card is an "action" card.
 

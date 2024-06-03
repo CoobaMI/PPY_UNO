@@ -27,7 +27,7 @@ class Game:
         self.player = 0
         self.direction = 1
 
-    def start_game(self):
+    def start_game(self) -> None:
         """
         Start the UNO game.
         """
@@ -36,7 +36,7 @@ class Game:
         self.prepare_discard_pile()
         self.play_game()
 
-    def setup_game(self):
+    def setup_game(self) -> None:
         """
         Set up the uno game by getting the player count initializing specified number of players.
         """
@@ -61,7 +61,7 @@ class Game:
             except ValueError:
                 print(f"{DARK_RED}Please enter a valid number.{RESET}")
 
-    def initialize_players(self, player_count: int):
+    def initialize_players(self, player_count: int) -> None:
         """
         Initialize a certain amount of players.
 
@@ -119,14 +119,14 @@ class Game:
             else:
                 return player_name
 
-    def distribute_initial_cards(self):
+    def distribute_initial_cards(self) -> None:
         """
         Distribute the initial 7 cards to each player in the game.
         """
         for player in self.players:
             player.draw(self.deck, self.discard_pile, 7)
 
-    def prepare_discard_pile(self):
+    def prepare_discard_pile(self) -> None:
         """
         Prepare discard pile for play, by placing new cards on it until card on top is not an action card.
         """
@@ -137,7 +137,7 @@ class Game:
                 break
         self.previous_color = self.discard_pile[-1].color
 
-    def play_game(self):
+    def play_game(self) -> None:
         """
         Start the main game loop.
         """
@@ -178,7 +178,7 @@ class Game:
                 return True
         return False
 
-    def show_top_card(self):
+    def show_top_card(self) -> None:
         """
         Show top card in the discard pile on terminal.
         """
@@ -191,7 +191,7 @@ class Game:
             read_cards([self.discard_pile[-1]])
 
     @staticmethod
-    def get_color_code(color: str):
+    def get_color_code(color: str) -> str:
         """
         Get color code for card color.
 
@@ -207,7 +207,7 @@ class Game:
         else:
             return BLUE
 
-    def play_turn(self, current_player: Player):
+    def play_turn(self, current_player: Player) -> bool:
         """
         Play a players turn.
 
@@ -276,7 +276,7 @@ class Game:
             else:
                 print(f"{DARK_RED}Invalid input, please try again.{RESET}")
 
-    def call_uno(self, current_player: Player):
+    def call_uno(self, current_player: Player) -> None:
         """
         Allow player to call UNO or stop it.
 
@@ -292,7 +292,7 @@ class Game:
             else:
                 print(f"{DARK_RED}Invalid input, please try again.{RESET}")
 
-    def handle_action_card(self, new_card: Card):
+    def handle_action_card(self, new_card: Card) -> None:
         """
         Handle action card correctly, according to the value.
 

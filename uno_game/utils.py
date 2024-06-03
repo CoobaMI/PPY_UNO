@@ -5,11 +5,12 @@ and a decorator used for making sure there is enough cards in the deck.
 
 """
 import random
+from typing import Callable
 from card import Card
 from colors import RED, YELLOW, GREEN, BLUE, RESET, PURPLE
 
 
-def check_deck_size(func):
+def check_deck_size(func: Callable) -> Callable:
     """
     Decorator to ensure, that deck has enough cards before drawing.
     If not, more cards will be put into the deck from the discard pile and the deck will be shuffled.
@@ -17,7 +18,15 @@ def check_deck_size(func):
     :param func: The function to be wrapped.
     :return: The wrapped function.
     """
-    def wrapper(self, deck, discard_pile, amount, *args, **kwargs):
+    def wrapper(self, deck: list[Card], discard_pile: list[Card], amount: int, *args, **kwargs) -> None:
+        """
+        Wrapper to check deck size and replenish it if needed.
+
+        :param self: The instance of the class calling this function.
+        :param deck: The deck of cards to be drawn from.
+        :param discard_pile: The discard pile to replenish deck from.
+        :param amount: The number of cards to be drawn.
+        """
         if len(deck) < amount:
             deck.extend(discard_pile[:-1])
             del discard_pile[:-1]
