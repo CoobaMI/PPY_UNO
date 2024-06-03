@@ -2,6 +2,17 @@
 
 This project contains an Uno game on terminal programmed in Python. 
 
+## Game Launch Guide
+
+1. Navigate to the game directory.
+```bash
+cd path/to/your/game/directory
+ ```
+2. Launch the main.py file.
+ ```bash
+python main.py
+ ```
+
 ## Rules
 
 1. **Card Types**:
