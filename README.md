@@ -19,7 +19,7 @@ This project contains an Uno game on terminal programmed in Python.
      -   Reverse: The direction of play is reversed.
      -   Draw Two: The next player loses their round and has to draw 2 cards.
      -   Wild: Can be placed on anything and the current player specifies the color for the next player.
-     -   Wild Draw Four: Same as Wild but also The next player loses their round and has to draw 4 cards.
+     -   Wild Draw Four: Same as Wild, but the next player loses their round and has to draw 4 cards.
 
 4. **Winning**:
    - When The player places their second to last card, they have to call "UNO" or someone else can call "STOP UNO".
